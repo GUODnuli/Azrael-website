@@ -22,7 +22,7 @@ pub fn App(cx: Scope) -> impl IntoView {
     provide_context(cx, posts);
 
     view! { cx,
-        <Stylesheet id="leptos" href="/pkg/itehax-website.css"/>
+        <Stylesheet id="leptos" href="/pkg/azrael-website.css"/>
         <Link rel="shortcut icon" type_="image/png" href="/favicon1.png"/>
         <Link rel="preconnect" href="https://fonts.googleapis.com"/>
         <Link rel="preconnect" href="https://fonts.gstatic.com"/>

@@ -6,7 +6,7 @@ use leptos_meta::*;
 pub fn Home(cx: Scope) -> impl IntoView {
     view! { cx,
         <Html lang="en" class="h-full"/>
-        <Title text="Itehax"/>
+        <Title text="Azrael"/>
         <Meta
             name="description"
             content="My own personal website. Here you'll find everything about me."
@@ -25,7 +25,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
                             href="#"
                             aria-label="Brand"
                         >
-                            "Itehax 🖥️🥊📚"
+                            "Azrael"
                         </a>
                         <div class="sm:hidden">
                             <button
@@ -100,7 +100,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
             <main id="content" role="main">
                 <div class="text-center py-10 px-4 sm:px-6 lg:px-8">
                     <h1 class="block text-2xl font-bold  sm:text-4xl animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">
-                        "Itehax."
+                        "Azrael."
                     </h1>
                     <p class="mt-5 text-lg text-[#F8F9FA]">
                         "Backend Developer // Reverse Engineer // Game Hacker // Malware
@@ -111,7 +111,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
                         <div class="mt-3 space-x-2">
                             <a
                                 class="hover:-translate-y-1 inline-flex justify-center items-center w-10 h-10 text-center rounded-full  transition text-gray-500 hover:text-gray-200 "
-                                href="https://github.com/itehax"
+                                href="https://github.com/GUODnuli"
                             >
                                 <svg
                                     class="w-5 h-5"
@@ -159,7 +159,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
                             </a>
                             <a
                                 class="inline-flex justify-center items-center w-10 h-10 text-center rounded-full  transition text-gray-500 hover:text-gray-200 hover:-translate-y-1"
-                                href="https://discordapp.com/users/itehax"
+                                href="#"
                             >
                                 <svg
                                     class="w-5 h-5"
@@ -175,7 +175,7 @@ pub fn Home(cx: Scope) -> impl IntoView {
                             </a>
                             <a
                                 class="inline-flex justify-center items-center w-10 h-10 text-center rounded-full  transition text-gray-500 hover:text-gray-200 hover:-translate-y-1"
-                                href="https://www.youtube.com/@itehax"
+                                href="#"
                             >
 
                                 <svg

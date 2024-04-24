@@ -2,9 +2,9 @@
 #[tokio::main]
 async fn main() {
     use axum::{routing::get, routing::post, Router};
-    use itehax_website::app::*;
-    use itehax_website::fileserv::file_and_error_handler;
-    use itehax_website::routes::feed::rss_feed;
+    use azrael_website::app::*;
+    use azrael_website::fileserv::file_and_error_handler;
+    use azrael_website::routes::feed::rss_feed;
     use leptos::*;
     use leptos_axum::{generate_route_list, LeptosRoutes};
 
