@@ -4,8 +4,8 @@ use leptos_meta::*;
 use crate::components::footer::{GoBack, HomeFooter};
 
 #[component]
-pub fn About(cx: Scope) -> impl IntoView {
-    view! { cx,
+pub fn About() -> impl IntoView {
+    view! {
         <Title text="Itehax About"/>
         <Meta name="description" content="About me."/>
         <Body class="bg-[#080A21]"/>
