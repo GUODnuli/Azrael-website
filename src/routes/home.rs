@@ -11,7 +11,7 @@ pub fn Home() -> impl IntoView {
             name="description"
             content="My own personal website. Here you'll find everything about me."
         />
-        <Body class="bg-[#080A21] flex h-full"/>
+        <Body class="bg-[#000000] flex h-full"/>
         <div class="max-w-[50rem] flex flex-col mx-auto w-full h-full ">
             // <!-- ========== HEADER ========== -->
             <header class="mb-auto flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-4">
@@ -21,7 +21,7 @@ pub fn Home() -> impl IntoView {
                 >
                     <div class="flex items-center justify-between">
                         <a
-                            class="flex-none text-xl font-semibold text-[#F8F9FA]"
+                            class="flex-none text-xl font-semibold text-[#ffffff]"
                             href="#"
                             aria-label="Brand"
                         >
@@ -30,7 +30,7 @@ pub fn Home() -> impl IntoView {
                         <div class="sm:hidden">
                             <button
                                 type="button"
-                                class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md  font-medium text-[#CED4DA]  hover:text-[#CED4DA] shadow-sm align-middle transition-all text-sm"
+                                class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md  font-medium text-[#ffffff]  hover:text-[#579bdf] shadow-sm align-middle transition-all text-sm"
                                 data-hs-collapse="#navbar-collapse-with-animation"
                                 aria-controls="navbar-collapse-with-animation"
                                 aria-label="Toggle navigation"
@@ -64,29 +64,33 @@ pub fn Home() -> impl IntoView {
                         class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
                     >
                         <div class="flex flex-col gap-5 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
-                            <a class="font-medium text-[#F8F9FA]" href="about" aria-current="page">
+                            <a 
+                                class="font-medium text-[#ffffff] hover:text-[#938afd]"
+                                href="about"
+                                aria-current="page"
+                            >
                                 "About"
                             </a>
                             <a
-                                class="font-medium  text-[#CED4DA]  hover:text-[#F8F9FA]"
+                                class="font-medium  text-[#ffffff]  hover:text-[#938afd]"
                                 href="projects"
                             >
                                 "Projects"
                             </a>
                             <a
-                                class="font-medium  text-[#CED4DA]  hover:text-[#F8F9FA]"
+                                class="font-medium  text-[#ffffff]  hover:text-[#938afd]"
                                 href="blog"
                             >
                                 "Blog"
                             </a>
                             <a
-                                class="font-medium  text-[#CED4DA]  hover:text-[#F8F9FA]"
+                                class="font-medium  text-[#ffffff]  hover:text-[#938afd]"
                                 href="books"
                             >
                                 "Books"
                             </a>
                             <a
-                                class="font-medium  text-[#CED4DA]  hover:text-[#F8F9FA]"
+                                class="font-medium  text-[#ffffff]  hover:text-[#938afd]"
                                 href="hire-me"
                             >
                                 "Hire Me"
@@ -99,12 +103,12 @@ pub fn Home() -> impl IntoView {
             // <!-- ========== MAIN CONTENT ========== -->
             <main id="content" role="main">
                 <div class="text-center py-10 px-4 sm:px-6 lg:px-8">
-                    <h1 class="block text-2xl font-bold  sm:text-4xl animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">
+                    <h1 class="block text-2xl font-bold sm:text-4xl animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">
+                    // <h1 class="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500">
                         "Azrael."
                     </h1>
-                    <p class="mt-5 text-lg text-[#F8F9FA]">
-                        "Backend Developer // Reverse Engineer // Game Hacker // Malware
-                        Analyst"
+                    <p class="mt-5 text-lg text-[#ffffff]">
+                        "Backend Developer // Gamer // Software QA Engineer"
                     </p>
                     <div class="mt-18 flex flex-col justify-center items-center gap-2 sm:flex-row sm:gap-3">
                         // <!-- Social Brands -->
@@ -189,26 +193,7 @@ pub fn Home() -> impl IntoView {
                                         d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765c1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6l5.207 3.005l-5.212 2.995z"
                                     ></path>
                                 </svg>
-
                             </a>
-
-                        // telegram icon
-                        // <a
-                        // class="inline-flex justify-center items-center w-10 h-10 text-center rounded-full  transition text-gray-500 hover:text-gray-200 hover:-translate-y-1"
-                        // href="#"
-                        // >
-                        // <svg
-                        // class="w-5 h-5"
-                        // viewBox="0 0 24 24"
-                        // xmlns="http://www.w3.org/2000/svg"
-                        // fill="currentColor"
-                        // >
-                        // <path
-                        // fill="currentColor"
-                        // d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19c-.14.75-.42 1-.68 1.03c-.58.05-1.02-.38-1.58-.75c-.88-.58-1.38-.94-2.23-1.5c-.99-.65-.35-1.01.22-1.59c.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02c-.09.02-1.49.95-4.22 2.79c-.4.27-.76.41-1.08.4c-.36-.01-1.04-.2-1.55-.37c-.63-.2-1.12-.31-1.08-.66c.02-.18.27-.36.74-.55c2.92-1.27 4.86-2.11 5.83-2.51c2.78-1.16 3.35-1.36 3.73-1.36c.08 0 .27.02.39.12c.1.08.13.19.14.27c-.01.06.01.24 0 .38z"
-                        // ></path>
-                        // </svg>
-                        // </a>
                         </div>
                     </div>
                 </div>

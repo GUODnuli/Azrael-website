@@ -5,7 +5,7 @@ use crate::{
         about::About,
         blog::blog_section::BlogPost,
         books::{books_article::RenderBooksPost, books_section::BooksPost},
-        hire_me::HireMe,
+        // hire_me::HireMe,
         home::Home,
         projects::{projects_article::RenderProjectsPost, projects_section::ProjectsPost},
     },
@@ -68,12 +68,12 @@ pub fn App() -> impl IntoView {
                     }
                 />
 
-                <Route
-                    path="/hire-me"
-                    view=move || {
-                        view! { <HireMe/> }
-                    }
-                />
+                // <Route
+                //     path="/hire-me"
+                //     view=move || {
+                //         view! { <HireMe/> }
+                //     }
+                // />
 
                 <Route
                     path="/books"
