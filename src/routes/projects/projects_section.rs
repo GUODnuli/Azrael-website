@@ -7,11 +7,11 @@ use leptos_meta::*;
 #[component]
 pub fn ProjectsPost() -> impl IntoView {
     view! {
-        <Title text="Itehax Projects"/>
+        <Title text="Azrael Projects"/>
         <Meta name="description" content="My Projects Posts."/>
         <Post
             post_type=PostType::Project
-            post_description="Posts about projects i created.".to_string()
+            post_description="一些我的个人项目.".to_string()
         />
     }
 }

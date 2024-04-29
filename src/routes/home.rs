@@ -30,7 +30,7 @@ pub fn Home() -> impl IntoView {
                         <div class="sm:hidden">
                             <button
                                 type="button"
-                                class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md  font-medium text-[#ffffff]  hover:text-[#579bdf] shadow-sm align-middle transition-all text-sm"
+                                class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-md  font-medium text-[#ffffff]  hover:text-[#938afd] shadow-sm align-middle transition-all text-sm"
                                 data-hs-collapse="#navbar-collapse-with-animation"
                                 aria-controls="navbar-collapse-with-animation"
                                 aria-label="Toggle navigation"
@@ -91,10 +91,16 @@ pub fn Home() -> impl IntoView {
                             </a>
                             <a
                                 class="font-medium  text-[#ffffff]  hover:text-[#938afd]"
-                                href="hire-me"
+                                herf="App"
                             >
-                                "Hire Me"
+                                "App"
                             </a>
+                            // <a
+                            //     class="font-medium  text-[#ffffff]  hover:text-[#938afd]"
+                            //     href="hire-me"
+                            // >
+                            //     "Hire Me"
+                            // </a>
                         </div>
                     </div>
                 </nav>
@@ -104,7 +110,6 @@ pub fn Home() -> impl IntoView {
             <main id="content" role="main">
                 <div class="text-center py-10 px-4 sm:px-6 lg:px-8">
                     <h1 class="block text-2xl font-bold sm:text-4xl animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text text-transparent">
-                    // <h1 class="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500">
                         "Azrael."
                     </h1>
                     <p class="mt-5 text-lg text-[#ffffff]">

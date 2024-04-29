@@ -40,20 +40,24 @@ pub fn About() -> impl IntoView {
                             </p>
                         </li>
                     </ol>
-                    <h3>"What should be expected from this blog"</h3>
+                    <h3>"展望"</h3>
+                    <p>
+                        "之后我还会在这里上线一些小的应用程序, 事实上是工作中自己编写的一些小工具, 它们大多是其他语言编写的, 我预期使用Rust把它们重构之后上线App页面."
+                    </p>
+                    <h3>"致谢"</h3>
+                    <p>
+                        "博客的诞生离不开以下大佬带来的灵感:"
+                    </p>
                     <ol>
                         <li>
                             <p>
-                                "Programming post, I have several projects in mind and I will comment/write down what I have learnt useful."
+                                <a href="https://itehax.com/" class="hover:text-[#938afd]"><strong>"Itehax."</strong></a>
                             </p>
                         </li>
                         <li>
                             <p>
-                                "Posts on reverse engineering, malware analysis and game hacking, regarding these topics,I will always post several projects and open a youtube channel, especially on the use of rust in this field 🦀."
+                                <a herf="https://szclsya.me/zh-cn/" class="hover:text-[#938afd]"><strong>"szclsya"</strong></a>
                             </p>
-                        </li>
-                        <li>
-                            <p>"Finally, reviews of books read by me."</p>
                         </li>
                     </ol>
                 </div>

@@ -17,17 +17,17 @@ pub fn Post(post_type: PostType, post_description: String) -> impl IntoView {
         use_context::<Resource<(), Result<HashMap<PostType, Vec<Post>>, ServerFnError>>>()
             .expect("unable to find context");
     view! {
-        <Body class="bg-[#080A21]"/>
+        <Body class="bg-[#000000]"/>
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
                 <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-[#F8F9FA]">
-                    "Posts"
+                    {post_type.to_string()}
                 </h2>
                 <p class="mt-1  text-[#CED4DA]">{post_description}</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <Transition fallback=move || {
-                    view! { <p>"Loading..."</p> }
+                    view! { <p>"加载中..."</p> }
                 }>
                     {move || {
                         posts
@@ -59,7 +59,6 @@ pub fn Post(post_type: PostType, post_description: String) -> impl IntoView {
                                         .collect_view()
                                 }
                                 Err(e) => {
-
                                     view! {
                                         <pre class="error">"Server Error: " {e.to_string()}</pre>
                                     }
@@ -94,8 +93,8 @@ pub fn PostCard(post_metadata: PostMetadata, path: String) -> impl IntoView {
                 <p class="mt-5 text-[#CED4DA]">{post_metadata.description}</p>
             </div>
             <div class="mt-auto flex items-center gap-x-3">
-                <img class="w-8 h-8 rounded-full" src="https://github.com/itehax.png"/>
-                <h5 class="text-sm text-gray-200">"By Itehax."</h5>
+                <img class="w-8 h-8 rounded-full" src="https://avatars.githubusercontent.com/u/12367902?v=4"/>
+                <h5 class="text-sm text-gray-200">"By Azrael."</h5>
             </div>
         </a>
     }
@@ -119,8 +118,8 @@ pub fn ProjectPostCard(post_metadata: PostMetadata, href: String) -> impl IntoVi
                 <p class="mt-5 text-[#CED4DA]">{post_metadata.description}</p>
             </div>
             <div class="mt-auto flex items-center gap-x-3">
-                <img class="w-8 h-8 rounded-full" src="https://github.com/itehax.png"/>
-                <h5 class="text-sm text-gray-200">"By Itehax."</h5>
+                <img class="w-8 h-8 rounded-full" src="https://avatars.githubusercontent.com/u/12367902?v=4"/>
+                <h5 class="text-sm text-gray-200">"By Azrael."</h5>
             </div>
         </a>
     }

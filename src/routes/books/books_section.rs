@@ -7,8 +7,8 @@ use leptos_meta::*;
 #[component]
 pub fn BooksPost() -> impl IntoView {
     view! {
-        <Title text="Itehax Books"/>
+        <Title text="Azrael Books"/>
         <Meta name="description" content="My Books Posts."/>
-        <Post post_type=PostType::Book post_description="Posts about books i read.".to_string()/>
+        <Post post_type=PostType::Book post_description="墨香余韵.".to_string()/>
     }
 }
