@@ -8,8 +8,8 @@ pub fn About() -> impl IntoView {
     view! {
         <Title text="Azrael About"/>
         <Meta name="description" content="About me."/>
-        <Body class="bg-[#000000]"/>
-        <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <Body class="flex flex-col min-h-screen bg-[#000000]"/>
+        <div class="flex flex-col flex-grow max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
             <div class="max-w-3xl">
                 <div class="prose prose-blog mx-auto md:prose-lg prose-pre:m-0 prose-pre:rounded-none">
                     <h2>"我是Azrael.欢迎来到我的博客."</h2>

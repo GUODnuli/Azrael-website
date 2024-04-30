@@ -7,8 +7,8 @@ use crate::components::footer::{GoBack, HomeFooter};
 pub fn HireMe() -> impl IntoView {
     view! {
         <Title text="Hire Me"/>
-        <Meta name="description" content="Hire Itehax as:"/>
-        <Body class="bg-[#080A21]"/>
+        <Meta name="description" content="Hire Azrael as:"/>
+        <Body class="flex flex-col min-h-screen bg-[#080A21]"/>
         <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
             // <!-- Icon Blocks -->
             <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">

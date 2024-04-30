@@ -23,7 +23,7 @@ pub fn App() -> impl IntoView {
 
     view! {
         <Stylesheet id="leptos" href="/pkg/azrael-website.css"/>
-        <Link rel="shortcut icon" type_="image/png" href="/favicon1.png"/>
+        <Link rel="shortcut icon" type_="image/png" href="/Azrael.ico"/>
         <Link rel="preconnect" href="https://fonts.googleapis.com"/>
         <Link rel="preconnect" href="https://fonts.gstatic.com"/>
         <Link

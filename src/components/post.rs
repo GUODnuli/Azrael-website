@@ -17,7 +17,7 @@ pub fn Post(post_type: PostType, post_description: String) -> impl IntoView {
         use_context::<Resource<(), Result<HashMap<PostType, Vec<Post>>, ServerFnError>>>()
             .expect("unable to find context");
     view! {
-        <Body class="bg-[#000000]"/>
+        <Body class="flex flex-col min-h-screen bg-[#000000]"/>
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
                 <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-[#F8F9FA]">
@@ -93,7 +93,7 @@ pub fn PostCard(post_metadata: PostMetadata, path: String) -> impl IntoView {
                 <p class="mt-5 text-[#CED4DA]">{post_metadata.description}</p>
             </div>
             <div class="mt-auto flex items-center gap-x-3">
-                <img class="w-8 h-8 rounded-full" src="https://avatars.githubusercontent.com/u/12367902?v=4"/>
+                <img class="w-8 h-8 rounded-full" src="/Azrael.ico"/>
                 <h5 class="text-sm text-gray-200">"By Azrael."</h5>
             </div>
         </a>
@@ -118,7 +118,7 @@ pub fn ProjectPostCard(post_metadata: PostMetadata, href: String) -> impl IntoVi
                 <p class="mt-5 text-[#CED4DA]">{post_metadata.description}</p>
             </div>
             <div class="mt-auto flex items-center gap-x-3">
-                <img class="w-8 h-8 rounded-full" src="https://avatars.githubusercontent.com/u/12367902?v=4"/>
+                <img class="w-8 h-8 rounded-full" src="/Azrael.ico"/>
                 <h5 class="text-sm text-gray-200">"By Azrael."</h5>
             </div>
         </a>
@@ -179,7 +179,7 @@ pub fn RenderPost(post_type: PostType) -> impl IntoView {
 #[component]
 pub fn PostLayout(content: PostContent) -> impl IntoView {
     view! {
-        <div class="bg-[#080A21]">
+        <div class="bg-[#000000]">
             <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
                 <div class="max-w-3xl">
                     <div
