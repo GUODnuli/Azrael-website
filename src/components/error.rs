@@ -68,7 +68,7 @@ pub fn Error(error_code: StatusCode, error_string: String) -> impl IntoView {
                     </a>
                 </div>
             </div>
-            <HomeFooter/>
+            <HomeFooter father_name="Error".to_string()/>
         </div>
     }
 }

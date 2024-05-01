@@ -203,7 +203,7 @@ pub fn Home() -> impl IntoView {
                     </div>
                 </div>
             </main>
-            <HomeFooter/>
+            <HomeFooter father_name="Home".to_string()/>
         </div>
     }
 }

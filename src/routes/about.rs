@@ -64,6 +64,6 @@ pub fn About() -> impl IntoView {
             </div>
         </div>
         <GoBack content="Back to Home".to_string()/>
-        <HomeFooter/>
+        <HomeFooter father_name="About".to_string()/>
     }
 }

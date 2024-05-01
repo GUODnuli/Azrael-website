@@ -22,6 +22,7 @@ pub fn App() -> impl IntoView {
     provide_context(posts);
 
     view! {
+        <Html lang="zh-CN"/>
         <Stylesheet id="leptos" href="/pkg/azrael-website.css"/>
         <Link rel="shortcut icon" type_="image/png" href="/Azrael.ico"/>
         <Link rel="preconnect" href="https://fonts.googleapis.com"/>

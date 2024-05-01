@@ -71,7 +71,7 @@ pub fn Post(post_type: PostType, post_description: String) -> impl IntoView {
             </div>
         </div>
         <GoBack content="Back to Home".to_string()/>
-        <HomeFooter/>
+        <HomeFooter father_name="Post".to_string()/>
     }
 }
 
@@ -189,7 +189,7 @@ pub fn PostLayout(content: PostContent) -> impl IntoView {
                 </div>
             </div>
             <GoBack content="Back to Posts".to_string()/>
-            <HomeFooter/>
+            <HomeFooter father_name="PostLayout".to_string()/>
         </div>
     }
 }

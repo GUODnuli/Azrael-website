@@ -1,9 +1,21 @@
 use leptos::*;
 
 #[component]
-pub fn HomeFooter() -> impl IntoView {
+pub fn HomeFooter(father_name: String) -> impl IntoView {
+    let mut new_class: String = String::new();
+    match father_name.as_str() {
+        "Post" => {
+            new_class = "mt-0 w-full max-w-[85rem] pb-10 px-4 sm:px-6 lg:px-8 mx-auto".to_string();
+        },
+        "About" => {
+            new_class = "mt-0 w-full max-w-[85rem] pb-10 px-4 sm:px-6 lg:px-8 mx-auto".to_string();
+        },
+        _ => {
+            new_class = "mt-auto py-10 w-full max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto".to_string();
+        }
+    }
     view! {
-        <footer class="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+        <footer class=new_class>
             <div class="text-center">
                 <div class="mt-3">
                     <p class="text-[#CED4DA]">

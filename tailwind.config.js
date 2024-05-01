@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["*.html", "./src/**/*.rs", "./preline/*.js", "./posts/**/*.md"],
+  content: ["*.html", "./src/*/*.rs", "./preline/*.js", "./posts/*/*.md"],
   theme: {
     screens: {
       sm: "480px",
@@ -67,6 +67,6 @@ module.exports = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography")],
-  // plugins: [require("preline/plugin"), require("@tailwindcss/typography")],
+  // plugins: [require("@tailwindcss/typography")],
+  plugins: [require("preline/plugin"), require("@tailwindcss/typography")],
 };
