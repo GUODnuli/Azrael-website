@@ -44,9 +44,9 @@ pub enum PostType {
 impl std::fmt::Display for PostType {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         match self {
-            PostType::Blog => write!(f, "文章"),
-            PostType::Project => write!(f, "项目"),
-            PostType::Book => write!(f, "阅读书单"),
+            PostType::Blog => write!(f, "blog"),
+            PostType::Project => write!(f, "projects"),
+            PostType::Book => write!(f, "books"),
         }
     }
 }

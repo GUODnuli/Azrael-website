@@ -16,12 +16,18 @@ pub fn Post(post_type: PostType, post_description: String) -> impl IntoView {
     let posts =
         use_context::<Resource<(), Result<HashMap<PostType, Vec<Post>>, ServerFnError>>>()
             .expect("unable to find context");
+    let title_string = match post_type {
+        PostType::Blog => "文章",
+        PostType::Project => "项目",
+        PostType::Book => "阅读书单",
+    };
     view! {
         <Body class="flex flex-col min-h-screen bg-[#000000]"/>
+        
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
                 <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-[#F8F9FA]">
-                    {post_type.to_string()}
+                    {title_string.to_string()}
                 </h2>
                 <p class="mt-1  text-[#CED4DA]">{post_description}</p>
             </div>
@@ -134,7 +140,7 @@ pub fn RenderPost(post_type: PostType) -> impl IntoView {
 
     view! {
         <Suspense fallback=move || {
-            view! { <p>"Loading..."</p> }
+            view! { <p>"加载中..."</p> }
         }>
             {move || {
                 posts
