@@ -1,16 +1,16 @@
 ---
 image_path: "/images/book_images/atomic_habits.jpg"
-title: Atomic Habits
-date: 2023-07-24
-description: Atomic Habits will reshape the way you think about progress and success, and give you the tools and strategies you need to transform your habits.
+title: 活着
+date: 2023-05-03
+description: 一本为人带来力量的书, 通过主人公悲惨的一生, 让人思考活着的意义, 也让人感受到人类的坚韧的特质.
 project_link: none
 ---
 
-# Atomic Habits
+# 活着
 
-First of all I would like to say that this is one of the first books of this kind that I have read, usually programmers do not read this kind of book, it is more of an economist and business man thing, but instead I have been able to get a lot out of it and I think every developer should start reading mindset and personal growth books.
+诚实地说, 这是我自高中毕业以来, 重新开始阅读的第一本书. 为什么选择这本书开始呢? 其实只是因为余华这位作者是我女友的偶像, 同时这本书是余华名气最大的一本书. 当时我正在选择当月阅读书籍, 正巧在书城路过了这本书, 于是开启了我阅读余华书籍的路程.
 
-## What the book is about
+## 这本书在说什么
 
 The book draws on the most proven ideas from biology, psychology and neuroscience to create an easy-to-understand guide to making good habits (even very difficult habits) inevitable and bad habits impossible. Along the way, readers will be inspired and entertained with true stories of Olympic gold medalists, award-winning artists, business leaders, life-saving doctors, and stellar comedians who have used the science of small habits to master their craft and leap to the top of their field.
 
@@ -37,10 +37,3 @@ I would like to conclude with a key concept in this book, the simpler something 
 ## Would I recommend it?
 
 Yes, definitely especially for new developers who are not yet in the habit of programming and anyone who wants to pursue a goal as it **is not about motivation but about habits**.
-
-
-
-
-
-
-
