@@ -1,9 +1,8 @@
 use crate::{
     error_template::{AppError, ErrorTemplate},
-    routes::blog::blog_article::RenderBlogPost,
     routes::{
         about::About,
-        blog::blog_section::BlogPost,
+        blog::{blog_section::BlogPost, blog_article::RenderBlogPost},
         books::{books_article::RenderBooksPost, books_section::BooksPost},
         // hire_me::HireMe,
         home::Home,

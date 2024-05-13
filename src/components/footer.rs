@@ -1,4 +1,5 @@
 use leptos::*;
+use leptos_router::*;
 
 #[component]
 pub fn HomeFooter(father_name: String) -> impl IntoView {
@@ -70,9 +71,9 @@ pub fn GoBack(content: String) -> impl IntoView {
     view! {
         <footer class="mt-auto w-full max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
             <div class="text-center">
-                <a
+                <A
                     class="text-base w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold text-blue-500 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all  px-4 ring-offset-slate-900"
-                    href="/"
+                    href="../" 
                 >
                     <svg class="w-2.5 h-2.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path
@@ -83,7 +84,7 @@ pub fn GoBack(content: String) -> impl IntoView {
                         ></path>
                     </svg>
                     {content}
-                </a>
+                </A>
             </div>
         </footer>
     }

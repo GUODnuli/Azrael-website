@@ -3,7 +3,7 @@
 This is my personal website i built using [leptos](https://leptos.dev) and [preline](https://preline.co)
 ---
 
-[Preview](https://itehax.com)
+[Preview](https://Azrael.com)
 
 ## How to run
 
@@ -85,12 +85,11 @@ Will generate your server binary in target/release and your site package in targ
 # Using the docker image
 
 ```bash
-docker build ./ -t itehax-website
+docker build ./ -t Azrael-website
 ```
 
 After it's builded.
 
 ```bash
-docker run -p 3000:3000 itehax-website
+docker run -p 3000:3000 Azrael-website
 ```
-
