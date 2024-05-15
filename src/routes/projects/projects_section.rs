@@ -11,7 +11,7 @@ pub fn ProjectsPost() -> impl IntoView {
         <Meta name="description" content="My Projects Posts."/>
         <Post
             post_type=PostType::Project
-            post_description="一些我的个人项目.".to_string()
+            post_description="个人项目.".to_string()
         />
     }
 }

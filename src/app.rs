@@ -1,8 +1,9 @@
 use crate::{
     error_template::{AppError, ErrorTemplate},
+    routes::blog::blog_article::RenderBlogPost,
     routes::{
         about::About,
-        blog::{blog_section::BlogPost, blog_article::RenderBlogPost},
+        blog::blog_section::BlogPost,
         books::{books_article::RenderBooksPost, books_section::BooksPost},
         // hire_me::HireMe,
         home::Home,
@@ -53,7 +54,7 @@ pub fn App() -> impl IntoView {
                 <Route
                     path="/blog/:post"
                     view=move || {
-                        view! { ,
+                        view! {
                             <Link rel="stylesheet" href="/highlighter/styles/github.min.css"/>
                             <script src="/highlighter/load_highlight.js"></script>
                             <RenderBlogPost/>

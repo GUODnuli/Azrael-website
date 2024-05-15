@@ -1,6 +1,7 @@
 use crate::components::footer::HomeFooter;
 use leptos::*;
 use leptos_meta::*;
+use leptos_router::A;
 
 #[component]
 pub fn Home() -> impl IntoView {
