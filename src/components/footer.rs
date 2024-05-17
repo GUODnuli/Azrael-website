@@ -1,10 +1,11 @@
 use leptos::*;
+use leptos_router::*;
 
 #[component]
 pub fn HomeFooter(father_name: String) -> impl IntoView {
     let mut new_class: String = String::new();
     match father_name.as_str() {
-        "Post" => {
+        "Post" | "PostLayout" => {
             new_class = "mt-0 w-full max-w-[85rem] pb-10 px-4 sm:px-6 lg:px-8 mx-auto".to_string();
         },
         "About" => {
@@ -66,13 +67,15 @@ pub fn HomeFooter(father_name: String) -> impl IntoView {
 }
 
 #[component]
-pub fn GoBack(content: String, father_path: String) -> impl IntoView {
+pub fn GoBack(content: String) -> impl IntoView {
+    let route_context = use_context::<RouteContext>().expect("RouteContext should be available in this scope.");
+    let parent_path = remove_last_component(&route_context.path());
     view! {
         <footer class="mt-auto w-full max-w-[85rem] px-4 sm:px-6 lg:px-8 mx-auto">
             <div class="text-center">
                 <a
                     class="text-base w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold text-blue-500 hover:text-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all  px-4 ring-offset-slate-900"
-                    href="./"
+                    href=parent_path
                 >
                     <svg class="w-2.5 h-2.5" width="16" height="16" viewBox="0 0 16 16" fill="none">
                         <path
@@ -86,5 +89,19 @@ pub fn GoBack(content: String, father_path: String) -> impl IntoView {
                 </a>
             </div>
         </footer>
+    }
+}
+
+pub fn remove_last_component(path: &str) -> String {
+    match path.rfind('/') {
+        Some(pos) => {
+            let new_path = &path[..pos];
+            if new_path.is_empty() {
+                "/".to_string()
+            } else {
+                new_path.to_string()
+            }
+        },
+        None => path.to_string(),
     }
 }

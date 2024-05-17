@@ -10,6 +10,7 @@ use leptos::*;
 use leptos_meta::*;
 use leptos_router::use_params_map;
 use std::collections::HashMap;
+use std::fmt::format;
 
 #[component]
 pub fn Post(post_type: PostType, post_description: String) -> impl IntoView {
@@ -76,7 +77,7 @@ pub fn Post(post_type: PostType, post_description: String) -> impl IntoView {
                 </Transition>
             </div>
         </div>
-        <GoBack content="Back to Home".to_string() father_path="/".to_string()/>
+        <GoBack content="Back to Home".to_string()/>
         <HomeFooter father_name="Post".to_string()/>
     }
 }
@@ -159,7 +160,7 @@ pub fn RenderPost(post_type: PostType) -> impl IntoView {
                                         name="description"
                                         content=post.post_metadata.description.clone()
                                     />
-                                    <PostLayout content=post.post_content.clone()/>
+                                    <PostLayout content=post.post_content.clone() post_type=post_type/>
                                 }
                                     .into_view()
                             } else {
@@ -183,10 +184,20 @@ pub fn RenderPost(post_type: PostType) -> impl IntoView {
 }
 
 #[component]
-pub fn PostLayout(content: PostContent) -> impl IntoView {
+pub fn PostLayout(content: PostContent, post_type: PostType) -> impl IntoView {
+    let mut back_string = String::from("Back to Home");
+    match post_type {
+        PostType::Blog => {
+            back_string = "Back to Posts".to_string();
+        },
+        PostType::Book => {
+            back_string = "Back to Books".to_string();
+        },
+        _ => {}
+    }
     view! {
-        <div class="bg-[#000000]">
-            <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="bg-[#000000] min-h-screen flex flex-col">
+            <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto flex-grow">
                 <div class="max-w-3xl">
                     <div
                         class="prose prose-blog mx-auto md:prose-lg prose-pre:m-0 prose-pre:rounded-none"
@@ -194,7 +205,7 @@ pub fn PostLayout(content: PostContent) -> impl IntoView {
                     ></div>
                 </div>
             </div>
-            <GoBack content="Back to Posts".to_string() father_name="Post".to_string()/>
+            <GoBack content=back_string/>
             <HomeFooter father_name="PostLayout".to_string()/>
         </div>
     }
