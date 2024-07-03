@@ -1,7 +1,6 @@
 use leptos::*;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
-
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct PostMetadata {
     pub image_path: String,
@@ -142,6 +141,5 @@ cfg_if::cfg_if! {
 
             posts
         }
-
     }
 }

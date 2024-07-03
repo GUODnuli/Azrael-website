@@ -10,7 +10,6 @@ use leptos::*;
 use leptos_meta::*;
 use leptos_router::use_params_map;
 use std::collections::HashMap;
-use std::fmt::format;
 
 #[component]
 pub fn Post(post_type: PostType, post_description: String) -> impl IntoView {
@@ -24,7 +23,7 @@ pub fn Post(post_type: PostType, post_description: String) -> impl IntoView {
     };
     view! {
         <Body class="flex flex-col min-h-screen bg-[#000000]"/>
-        
+
         <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
             <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
                 <h2 class="text-2xl font-bold md:text-4xl md:leading-tight text-[#F8F9FA]">
@@ -162,7 +161,7 @@ pub fn RenderPost(post_type: PostType) -> impl IntoView {
                                     />
                                     <PostLayout content=post.post_content.clone() post_type=post_type/>
                                 }
-                                    .into_view()
+                                .into_view()
                             } else {
                                 let mut outside_errors = Errors::default();
                                 outside_errors.insert_with_default_key(AppError::NotFound);
@@ -172,13 +171,11 @@ pub fn RenderPost(post_type: PostType) -> impl IntoView {
                             }
                         }
                         Err(e) => {
-
                             view! { <pre class="error">"Server Error: " {e.to_string()}</pre> }
                                 .into_view()
                         }
                     })
             }}
-
         </Suspense>
     }
 }
@@ -203,6 +200,7 @@ pub fn PostLayout(content: PostContent, post_type: PostType) -> impl IntoView {
                         class="prose prose-blog mx-auto md:prose-lg prose-pre:m-0 prose-pre:rounded-none"
                         inner_html=content
                     ></div>
+
                 </div>
             </div>
             <GoBack content=back_string/>

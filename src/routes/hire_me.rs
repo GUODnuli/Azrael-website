@@ -112,6 +112,7 @@ pub fn HireMe() -> impl IntoView {
             </div>
         </div>
         <GoBack content="Back to Home".to_string()/>
-        // <HomeFooter/>
+        // <HomeFooter/>kenkins
+        
     }
 }
